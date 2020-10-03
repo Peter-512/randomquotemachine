@@ -49,16 +49,33 @@
   box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0);
   -webkit-transition-duration: 1s;
   transition-duration: 1s;
+  animation: out 0.4s forwards;
 }
 
 .button:hover {
   box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.6);
-  -webkit-transition: all 1s;
-  transition: all 1s;
+/*   -webkit-transition: 1s;
+  transition: 1s;
   -webkit-transform: scale(1.1);
-  transform: scale(1.1);
+  transform: scale(1.1); */
+  animation: in 0.4s forwards;
+  
 }
 
 .button:focus {
   outline: none;
+}
+
+@keyframes in {
+  from {-webkit-transform: scale(1);
+        transform: scale(1);}
+  to {-webkit-transform: scale(1.1);
+    transform: scale(1.1);}
+}
+
+@keyframes out {
+  from {-webkit-transform: scale(1.1);
+        transform: scale(1.1);}
+  to {-webkit-transform: scale(1);
+    transform: scale(1);}
 }
